@@ -1,0 +1,109 @@
+/* PROJECT DOES NOT WORK PROPERLY ANYMORE FOR SOME REASON! */
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.big-container {
+  background-image: url("https://www.wallgroup.com/media/catalog/product/cache/ce339dd56671d6bccbcac0916ee6b376/w/0/w01008.jpg");
+  background-repeat: round;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-title h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.question-title {
+  width: 95%;
+  text-align: center;
+}
+.question-title h1 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+}
+
+.cards-container {
+  border-radius: 10px;
+  margin: 5px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 140px;
+}
+
+.individual-card-container {
+  background-color: dodgerblue;
+  border-radius: 10px;
+  width: 140px;
+  height: 140px;
+  margin: 10px 10px;
+  position: relative;
+  transition: transform 300ms linear;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+.individual-card-container:active {
+  transform: rotateY(180deg);
+}
+.individual-card-container:hover {
+  cursor: pointer;
+}
+
+.front-back-container {
+  border-radius: inherit;
+}
+
+.front,
+.back {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: inherit;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: indianred;
+  z-index: -1;
+  transform: rotateY(180deg);
+}
